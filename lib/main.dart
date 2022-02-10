@@ -172,6 +172,7 @@ class _MyAppState extends State<MyApp> {
           AUTH0_REDIRECT_URI,
           issuer: 'https://$AUTH0_DOMAIN',
           scopes: <String>['openid', 'profile', 'offline_access'],
+          clientSecret: '' // This is Required in Updated Version Kindly Update it 
           // promptValues: ['login']
         ),
       );
@@ -229,6 +230,7 @@ class _MyAppState extends State<MyApp> {
         AUTH0_REDIRECT_URI,
         issuer: AUTH0_ISSUER,
         refreshToken: storedRefreshToken,
+        clientSecret: '' // This is Required in Updated Version Kindly Update it 
       ));
 
       final Map<String, Object> idToken = parseIdToken(response.idToken);
